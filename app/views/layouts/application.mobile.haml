@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no", :name => "viewport"}
+    %title= content_for?(:title) ? yield(:title) : "Cab fare estimator"
+    %meta{:content => content_for?(:description) ? yield(:description) : "Cabfares", :name => "description"}
+      = stylesheet_link_tag "application", :media => "all"
+      = javascript_include_tag "application"
+      = csrf_meta_tags
+      = yield(:head)
+    %link{:rel => "shortcut icon", :href => "/assets/favicon.ico"}
+  %body{:class => "#{controller_name} #{action_name}"}
+    #main{:role => "main"}
+      .container
+        .content
+          .row
+            .span12
+              = yield
+          %footer
+      / ! end of .container
+    / ! end of #main
