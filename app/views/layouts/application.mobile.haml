@@ -12,10 +12,7 @@
   %body{:class => "#{controller_name} #{action_name}"}
     #main{:role => "main"}
       .container
-        .content
-          .row
-            .span12
-              = yield
-          %footer
+        = yield
+      %footer
       / ! end of .container
     / ! end of #main
