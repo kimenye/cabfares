@@ -1,4 +1,5 @@
 class QueriesController < ApplicationController
+  has_mobile_fu
   # GET /queries
   # GET /queries.json
   def index
