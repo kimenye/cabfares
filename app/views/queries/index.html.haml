@@ -1,0 +1,29 @@
+%h1 Listing queries
+
+%table
+  %tr
+    %th From
+    %th To
+    %th Origin lat
+    %th Origin lon
+    %th Dest lat
+    %th Dest lon
+    %th
+    %th
+    %th
+
+  - @queries.each do |query|
+    %tr
+      %td= query.from
+      %td= query.to
+      %td= query.origin_lat
+      %td= query.origin_lon
+      %td= query.dest_lat
+      %td= query.dest_lon
+      %td= link_to 'Show', query
+      %td= link_to 'Edit', edit_query_path(query)
+      %td= link_to 'Destroy', query, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Query', new_query_path
