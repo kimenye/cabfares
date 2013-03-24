@@ -1,0 +1,27 @@
+%h1 Listing cabs
+
+%table
+  %tr
+    %th Name
+    %th Company
+    %th Reg
+    %th Verified
+    %th Phone number
+    %th
+    %th
+    %th
+
+  - @cabs.each do |cab|
+    %tr
+      %td= cab.name
+      %td= cab.company
+      %td= cab.reg
+      %td= cab.verified
+      %td= cab.phone_number
+      %td= link_to 'Show', cab
+      %td= link_to 'Edit', edit_cab_path(cab)
+      %td= link_to 'Destroy', cab, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Cab', new_cab_path

@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @cab.name
+%p
+  %b Company:
+  = @cab.company
+%p
+  %b Reg:
+  = @cab.reg
+%p
+  %b Verified:
+  = @cab.verified
+%p
+  %b Phone number:
+  = @cab.phone_number
+
+= link_to 'Edit', edit_cab_path(@cab)
+\|
+= link_to 'Back', cabs_path
