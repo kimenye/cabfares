@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Cab:
+  = @fare.cab
+%p
+  %b Query:
+  = @fare.query
+%p
+  %b Verified:
+  = @fare.verified
+%p
+  %b Reporter:
+  = @fare.reporter
+%p
+  %b Phone number:
+  = @fare.phone_number
+
+= link_to 'Edit', edit_fare_path(@fare)
+\|
+= link_to 'Back', fares_path

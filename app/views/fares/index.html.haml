@@ -1,0 +1,27 @@
+%h1 Listing fares
+
+%table
+  %tr
+    %th Cab
+    %th Query
+    %th Verified
+    %th Reporter
+    %th Phone number
+    %th
+    %th
+    %th
+
+  - @fares.each do |fare|
+    %tr
+      %td= fare.cab
+      %td= fare.query
+      %td= fare.verified
+      %td= fare.reporter
+      %td= fare.phone_number
+      %td= link_to 'Show', fare
+      %td= link_to 'Edit', edit_fare_path(fare)
+      %td= link_to 'Destroy', fare, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Fare', new_fare_path

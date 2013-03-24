@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130324110407) do
+ActiveRecord::Schema.define(:version => 20130324112525) do
 
   create_table "cabs", :force => true do |t|
     t.string   "name"
@@ -22,6 +22,21 @@ ActiveRecord::Schema.define(:version => 20130324110407) do
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
   end
+
+  create_table "fares", :force => true do |t|
+    t.integer  "cab_id"
+    t.integer  "query_id"
+    t.boolean  "verified"
+    t.string   "reporter"
+    t.string   "phone_number"
+    t.integer  "price_cents",    :default => 0,     :null => false
+    t.string   "price_currency", :default => "KES", :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+  end
+
+  add_index "fares", ["cab_id"], :name => "index_fares_on_cab_id"
+  add_index "fares", ["query_id"], :name => "index_fares_on_query_id"
 
   create_table "queries", :force => true do |t|
     t.string   "from"

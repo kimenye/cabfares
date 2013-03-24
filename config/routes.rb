@@ -1,4 +1,7 @@
 Cabfares::Application.routes.draw do
+  resources :fares
+
+
   resources :cabs
 
 
