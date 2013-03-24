@@ -2,9 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.cta {
-  display: block;
-  margin: 20px auto;
+
+.credits {
+  margin-top: 10px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.home {
+  .cta {
+    display: block;
+    margin: 10px auto;
+  }
 }
 
 footer {
