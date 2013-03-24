@@ -1,6 +1,8 @@
 // Place all the styles related to the Queries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$yellowColor: #F1C40F;
+
 .queries {
 
   .demo-logo small {
@@ -8,17 +10,17 @@
   }
 
   .demo-logo .logo {
-    background: url("logo.png") center 0 no-repeat;
-    background-size: 108px 108px;
-    height: 108px;
+    background: url("logo_small.png") center 0 no-repeat;
+    background-size: 100px 92px;
+    height: 92px;
     margin: 0 auto;
     overflow: hidden;
     text-indent: -9999em;
-    width: 108px;
+    width: 100px;
   }
 
   .btn.btn-primary {
-    background-color: #F1C40F;
+    background-color: $yellowColor;
   }
 
   input {
@@ -27,18 +29,32 @@
     border-radius: 6px;
     font-size: 24px;
     padding: 5px;
-  }
-
-  input.location {
-    width: 80%;
+    color: rgba(52, 73, 94, 0.3);
   }
 
   .locate-me {
     display: inline-block;
     width: 32px;
-    margin-top: 10px;
+    //margin-top: 10px;
     height: 32px;
     float: right;
     background: url('/assets/locate_me.png') no-repeat;
+  }
+
+  .add-on {
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+  }
+
+  .control-group.success input {
+    border: 2px solid $yellowColor;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+
+  .fields .span4 {
+    float: none;
+    margin: auto;
   }
 }

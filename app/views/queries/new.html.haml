@@ -1,0 +1,18 @@
+.demo-headline
+  %h1.demo-logo
+    %a{:href => root_path}
+      .logo
+    %small
+      Where are you going?
+.row.fields
+  .span4
+    .control-group.success
+      %input{:placeholder => "My destination"}
+  .span4
+    .control-group.success.input-append
+      %input.location{:placeholder => "Current Location"}
+      .add-on
+        %a.locate-me
+  .span4
+    %a.btn.btn-large.btn-block.btn-primary
+      Calculate
