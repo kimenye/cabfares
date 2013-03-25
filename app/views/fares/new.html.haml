@@ -1,5 +1,9 @@
-%h1 New fare
+.demo-headline
+  %h1.demo-logo
+    %a{:href => root_path}
+      .logo
+    %small
+      Where were you going?
 
 = render 'form'
 
-= link_to 'Back', fares_path

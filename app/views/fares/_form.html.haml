@@ -1,25 +1,35 @@
 = form_for @fare do |f|
-  - if @fare.errors.any?
+  .row.fields
+    = f.fields_for :query do |query|
+      .span4
+        .control-group.success
+          = query.text_field :from, :placeholder => "From"
+      .span4
+        .control-group.success.input-append
+          = query.text_field :to, :placeholder => "Destination", :class => "location"
+          .add-on
+            %a.locate-me
+  -#- if @fare.errors.any?
     #error_explanation
       %h2= "#{pluralize(@fare.errors.count, "error")} prohibited this fare from being saved:"
       %ul
         - @fare.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :cab
-    = f.text_field :cab
-  .field
-    = f.label :query
-    = f.text_field :query
-  .field
-    = f.label :verified
-    = f.check_box :verified
-  .field
-    = f.label :reporter
-    = f.text_field :reporter
-  .field
-    = f.label :phone_number
-    = f.text_field :phone_number
-  .actions
-    = f.submit 'Save'
+  -#.field
+  -#  = f.label :cab
+  -#  = f.text_field :cab
+  -#.field
+  -#  = f.label :query
+  -#  = f.text_field :query
+  -#.field
+  -#  = f.label :verified
+  -#  = f.check_box :verified
+  -#.field
+  -#  = f.label :reporter
+  -#  = f.text_field :reporter
+  -#.field
+  -#  = f.label :phone_number
+  -#  = f.text_field :phone_number
+  -#.actions
+  -#  = f.submit 'Save'

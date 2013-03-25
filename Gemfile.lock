@@ -75,6 +75,7 @@ GEM
     figaro (0.6.3)
       bundler (~> 1.0)
       rails (>= 3, < 5)
+    geocoder (1.1.6)
     haml (4.0.1.rc.1)
       tilt
     haml-rails (0.4)
@@ -200,6 +201,7 @@ DEPENDENCIES
   devise (>= 2.2.3)
   factory_girl_rails (>= 4.2.0)
   figaro (>= 0.6.3)
+  geocoder
   haml-rails (>= 0.4)
   html2haml (>= 1.0.1)
   jquery-rails

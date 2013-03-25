@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $yellowColor: #F1C40F;
 
-.queries {
+.queries, .fares {
 
   .demo-logo small {
     font-size: 24px;
@@ -23,19 +23,31 @@ $yellowColor: #F1C40F;
     background-color: $yellowColor;
   }
 
-  input {
+  .input-append, .input-prepend {
+    display: block;
+  }
+
+  .control-group {
+    margin-bottom: 0px;
+  }
+
+  input[type = "text"] {
     width: 100%;
     margin-top: 10px;
     border-radius: 6px;
     font-size: 24px;
-    padding: 5px;
-    color: rgba(52, 73, 94, 0.3);
+  }
+
+
+  @media (max-width: 480px) {
+    input.location {
+      width: 80%;
+    }
   }
 
   .locate-me {
     display: inline-block;
     width: 32px;
-    //margin-top: 10px;
     height: 32px;
     float: right;
     background: url('/assets/locate_me.png') no-repeat;
@@ -47,10 +59,11 @@ $yellowColor: #F1C40F;
     border: none;
   }
 
-  .control-group.success input {
+  .control-group.success input[type = "text"] {
     border: 2px solid $yellowColor;
     box-shadow: none;
     -webkit-box-shadow: none;
+    color: rgba(52, 73, 94, 0.3);
   }
 
   .fields .span4 {
